@@ -9,6 +9,7 @@
 * 搭建npm私服
 * 部署脚本
 * 执行脚本
+* 系统环境测试
 
 #### 文章简介
 * 本文介绍了整套前端系统工程的搭建：node、npm、pm2、jenkins的安装过程，如何搭建git server，如何使用淘宝的cnpm搭建自己的私有npm，
@@ -357,7 +358,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
     ```
 
 #### 部署脚本
-* 部署脚本写好后，放在jenkins新建shell执行过程中。主要工作：build项目，打包后上传到私有npm
+* 部署脚本写好后，放在jenkins新建shell执行过程中。它的主要工作：build项目，打包后上传到私有npm
     ```
     root@iZ8vb5awc622gw7a274vsbZ:/var/tmp/jenkins-workspace/workspace# cat deploy.sh
     #set -x
@@ -409,3 +410,5 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
     fi
     pm2 list
     ```
+#### 系统环境测试
+* 通过jenkins构建项目，部署到线上，浏览器访问ip:端口号，测试是否成功运行前端工程。
