@@ -408,5 +408,4 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
       pm2 start $deployPath'/server.js'
     fi
     pm2 list
-
-    ```
+    ```
