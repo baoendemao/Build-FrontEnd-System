@@ -11,13 +11,12 @@
 * 执行脚本
 
 #### 文章简介
-* 将jenkins的持续集成过程分成了两步：
-    * 第一步(即部署过程)包括从git clone项目，然后build项目，打包后上传到私有npm； 
-    * 第二步(即执行过程)包括从私有npm上将项目包install下来到项目工程目录，
-pm2启动node进程。
-* 本文介绍了具体的前端工程的搭建，如node、npm、pm2、jenkins的安装过程，如何搭建git server、如何使用淘宝的cnpm搭建自己的私有npm环境，
+* 本文介绍了整套前端系统工程的搭建：node、npm、pm2、jenkins的安装过程，如何搭建git server，如何使用淘宝的cnpm搭建自己的私有npm，
 以及自执行的shell部署脚本和shell执行脚本。
-
+* 这里将jenkins的持续集成过程分成了两个步骤，这两个步骤都是由jenkins项目自动构建、shell部署和执行脚本自动完成的。
+   * 步骤一(即部署过程)：从git server上clone项目，然后build项目，打包后上传到私有npm 
+   * 步骤二(即执行过程)：从私有npm上将项目包install下来到项目工程目录，然后pm2启动node进程。
+     
 #### 安装node环境 
 * yum install -g nodejs 或者 wget node的压缩包
 ```
@@ -37,7 +36,7 @@ v6.9.1
         * 内建负载均衡
         * 后台运行
         * 0秒停机重载
-        * 停止不稳定的进程，避免无线循环
+        * 停止不稳定的进程，避免无限循环
         * 控制台检测
         * 提供HTTP API
         * 远程控制和实时的接口API
