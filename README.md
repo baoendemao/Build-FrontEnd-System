@@ -11,7 +11,9 @@
 * 执行脚本
 
 #### 文章简介
-* 本文将jenkins的持续集成过程分成了两步：第一步(即部署过程)包括从git clone项目，然后build项目，打包后上传到私有npm； 第二步(即执行过程)包括从私有npm上将项目包install下来到项目工程目录，
+* 本文将jenkins的持续集成过程分成了两步：
+    * 第一步(即部署过程)包括从git clone项目，然后build项目，打包后上传到私有npm； 
+    * 第二步(即执行过程)包括从私有npm上将项目包install下来到项目工程目录，
 pm2启动node进程。
 * 本文主要介绍了具体的前端工程的搭建，如node、npm、pm2、jenkins的安装过程，如何搭建git server、如何使用淘宝的cnpm搭建自己的私有npm环境，
 以及自执行的shell部署脚本和shell执行脚本。
@@ -255,6 +257,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
     * 自定义cnpm配置文件 config/index.js
     
         * 配置1
+            * 添加Mysql配置到database字段中
 
         *  配置2
             * 7001表示npm源的端口号，7002表示web服务的端口号，bindingHost修改成自己的ip地址
@@ -267,6 +270,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
         ```
         [root@iZ8vb5awc622gw7a274vsbZ cnpmjs.org]# node dispatch.js   
         ```
+        ![image](https://raw.githubusercontent.com/baoendemao/Build-FrontEnd-System/master/images/cnpm-web.png)
         * 配置3
             * 为了方便命令行的操作，可以在~/.bashrc里添加命令别名：
             ```
@@ -381,7 +385,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
 
 
 #### 执行脚本
-* 执行脚本写好后，放在jenkins新建shell执行过程中。主要工作：从私有npm上将项目包install下来到项目工程目录，pm2启动node进程。
+* 执行脚本写好后，放在jenkins新建shell执行过程中。它的主要工作：从私有npm上将项目包install下来到项目工程目录，pm2启动node进程。
     ```
     root@iZ8vb5awc622gw7a274vsbZ:/var/tmp/jenkins-workspace/workspace# cat execute.sh
     #set -x
