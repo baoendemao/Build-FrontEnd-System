@@ -354,7 +354,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
     ```
 
 #### 部署脚本
-    * 部署脚本写好后，放在jenkins新建shell执行过程中。主要工作：build项目，打包后上传到私有npm
+* 部署脚本写好后，放在jenkins新建shell执行过程中。主要工作：build项目，打包后上传到私有npm
     ```
     root@iZ8vb5awc622gw7a274vsbZ:/var/tmp/jenkins-workspace/workspace# cat deploy.sh
     #set -x
@@ -381,7 +381,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
 
 
 #### 执行脚本
-    * 部署脚本写好后，放在jenkins新建shell执行过程中。主要工作：从私有npm上将项目包install下来到项目工程目录，pm2启动node进程。
+* 执行脚本写好后，放在jenkins新建shell执行过程中。主要工作：从私有npm上将项目包install下来到项目工程目录，pm2启动node进程。
     ```
     root@iZ8vb5awc622gw7a274vsbZ:/var/tmp/jenkins-workspace/workspace# cat execute.sh
     #set -x
