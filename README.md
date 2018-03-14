@@ -6,7 +6,7 @@
 * 搭建git server
 * 搭建持续集成环境jenkins
 * 新建前端工程
-* 搭建npm私有源
+* 搭建npm私服
 * 部署脚本
 * 执行脚本
 
@@ -214,7 +214,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
     ```
 * 搭建好前端测试工程，push到git server
 
-#### 搭建npm私有源
+#### 搭建npm私服
 *  安装nrm
 ```
 [root@iZ8vb5awc622gw7a274vsbZ ~]# npm install -g nrm
@@ -284,7 +284,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
             var NpmUserService = require('./user-service/npm-user-service');
             var myUserService = new NpmUserService();
             ```
-            修改字段：
+            * 在config里修改字段：
             ```
              userService: myUserService,
             ```
@@ -409,9 +409,4 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
     fi
     pm2 list
 
-    ```
-
-
-
-
-
+    ```
