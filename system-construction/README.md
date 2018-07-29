@@ -272,7 +272,7 @@ root     10151  9364  0 22:50 pts/0    00:00:00 grep java
         ```
         [root@iZ8vb5awc622gw7a274vsbZ cnpmjs.org]# node dispatch.js   
         ```
-        ![image](https://raw.githubusercontent.com/baoendemao/Build-FrontEnd-System/master/images/cnpm-web.png)
+        ![image](https://github.com/baoendemao/front-end-engineering/blob/master/system-construction/images/cnpm-web.png)
         * 配置3
             * 为了方便命令行的操作，可以在~/.bashrc里添加命令别名：
             ```
