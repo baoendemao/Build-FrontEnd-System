@@ -1,6 +1,6 @@
 #### 如何使用logrotate对日志进行切割
 * logrotate介绍<br/>
-logrotate是基于crontab运行的，是一个日志管理工具，可以分割日志
+logrotate是linux下的日志分割工具，它是基于crontab运行的，同时也是一个日志管理工具。
 * logrotate安装
 ```
 yum install logrotate
@@ -95,10 +95,13 @@ create 644 www www: 以指定的权限创建全新的日志文件，同时logrot
     # 查看当前执行的定时任务
     crontab -l
 
+
     ```
+    *  之后在/var/log/nginx/可以看到以日期结尾的分割文件
     * 添加过程中如果出现错误crond: can't lock /var/run/crond.pid, otherpid may be 2122: Resource temporarily unavailable
     ```
     解决方法：
     sudo rm -rf /var/run/crond.pid 
     sudo crond restart
     ```
+* 如果想要更个性化的日志分割工具，可以通过shell脚本实现，同时添加到crontab任务中
