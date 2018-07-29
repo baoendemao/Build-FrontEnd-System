@@ -44,9 +44,4 @@ Starting crond: [  OK  ]
 
 ```
 
-* 可能遇到的问题<br/>
-    * crontab配置好，但是不按时执行
-        * 解决方法： 查看/var/spool/mail/root中是否有错误记录，查看/var/log/cron里的日志是否有定时任务的执行记录
-    * 报错：you must have a tty to run sudo
-        * vim /etc/sudoers , 注释掉 Default requiretty , 来允许sudo在后台允许
 
