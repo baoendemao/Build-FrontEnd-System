@@ -1,7 +1,7 @@
 #### 如何使用crontab创建定时任务
 * 常用命令
     * 编辑定时任务： crontab -e 
-    * 列出定时任务： crontab -l 
+    * 列出定时任务： crontab -l 
         * root查看自己的cron设置： crontab –u root –l 
     * 删除定时任务：crontab –u fred –r
     * 重启服务： service crond restart  
