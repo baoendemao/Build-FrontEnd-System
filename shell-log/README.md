@@ -17,13 +17,12 @@ if [ ! -d "$today_folder" ]; then
 fi
 
 # 文件如果存在，则转存到日期文件夹下
-# 文件如果不存在，则创建
 if [ -f "$log_path/access.log" ]; then
   sudo mv $log_path/access.log $today_folder/access.log_${time}
-else
-  sudo touch $log_path/access.log
-  sudo chmod 644 $log_path/access.log
 fi
+sudo touch $log_path/access.log
+sudo chmod 644 $log_path/access.log
+
 
 sudo kill -USR1 `cat /var/run/nginx.pid` 
 
