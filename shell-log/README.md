@@ -5,7 +5,7 @@
 # 日志文件夹
 log_path='/var/log/nginx/monitor-logs' 
 # 事件戳，如2018-07-28_11-27-58
-time=$(date -d yesterday +"%Y-%m-%d_%H-%M-%S" )  
+time=$(date -d today +"%Y-%m-%d_%H-%M-%S" )  
 # 今天
 today=$(date -d today +"%Y%m%d" ) 
 # 日志文件夹，如20180729
@@ -16,13 +16,11 @@ if [ ! -d "$today_folder" ]; then
   mkdir $today_folder
 fi
 
-# 文件如果存在，则转存到日期文件夹下
-if [ -f "$log_path/access.log" ]; then
-  sudo mv $log_path/access.log $today_folder/access.log_${time}
+# 将access.log转存到日期文件夹下
+if [ ! -f "$today_folder/access.log_${time}" ]; then
+  cat $base_path/access.log > $today_folder/access.log_${time}
+  cat /dev/null > $base_path/access.log
 fi
-sudo touch $log_path/access.log
-sudo chmod 644 $log_path/access.log
-
 
 sudo kill -USR1 `cat /var/run/nginx.pid` 
 
