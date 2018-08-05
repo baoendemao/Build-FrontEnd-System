@@ -1,7 +1,7 @@
 #### cluster
 * cluster
     * cluster可以使得node充分利用多核CPU
-    * 两个进程： master进程和work进程
+    * 两种进程： master进程和work进程, 可以根据cpu的个数来决定fork出多少数量的work进程
     * 进程间通信：每个worker进程通过IPC（Inter-Process Communication，进程间通信）来实现和master进程间通信。<br/>
         进程间通信的5种方式：
         * 管道：速度慢，容量有限，只有父子进程能通讯    
