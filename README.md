@@ -15,6 +15,7 @@
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
 * [event loop](https://github.com/baoendemao/front-end-engineering/tree/master/node/event-loop)
 * [cluster](https://github.com/baoendemao/front-end-engineering/tree/master/node/cluster)
+* [global](https://github.com/baoendemao/front-end-engineering/tree/master/node/global)
 
 #### koa
 * [搭建koa项目](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-build)
