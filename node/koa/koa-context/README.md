@@ -1,5 +1,8 @@
 #### koa context
 * ctx.body
+    * 发送的html
+* ctx.type
+    * 如 ctx.type = "text/html; charset=utf-8"
 * ctx.request
     * context经过封装的请求对象
 * ctx.response
