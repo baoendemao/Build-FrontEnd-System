@@ -11,6 +11,9 @@
 #### 浏览器
 * [前端性能分析](https://github.com/baoendemao/front-end-engineering/tree/master/performance-analysis)
 
+#### APP
+* [hybrid](https://github.com/baoendemao/front-end-engineering/tree/master/APP-related)
+
 #### node
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
 * [event loop](https://github.com/baoendemao/front-end-engineering/tree/master/node/event-loop)
