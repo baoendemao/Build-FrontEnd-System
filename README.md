@@ -14,6 +14,11 @@
 #### APP
 * [hybrid](https://github.com/baoendemao/front-end-engineering/tree/master/APP-related/hybrid)
 
+#### 模板
+* [模板引擎](https://github.com/baoendemao/front-end-engineering/tree/master/template/template-engine)
+* [jade](https://github.com/baoendemao/front-end-engineering/tree/master/template/jade)
+
+
 #### node
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
 * [event loop](https://github.com/baoendemao/front-end-engineering/tree/master/node/event-loop)
