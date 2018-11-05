@@ -1,0 +1,11 @@
+#### hybrid
+* h5与native通信
+    * native调用js的方法
+    * js调用native的方法
+        * js如何得到app的版本号
+    * 如何取native的数据
+        * h5自己取
+        * native注入
+    * 登录
+        * 如：存在cookie
+* webview的生命周期
