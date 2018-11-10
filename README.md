@@ -8,6 +8,9 @@
 * [如何编写shell脚本对日志进行切割](https://github.com/baoendemao/front-end-engineering/tree/master/shell-log)
 * [在linux下使用httpry抓包](https://github.com/baoendemao/front-end-engineering/tree/master/httpry)
 
+#### git
+* [git](https://github.com/baoendemao/front-end-engineering/tree/master/git)
+
 #### 浏览器
 * [前端性能分析](https://github.com/baoendemao/front-end-engineering/tree/master/performance-analysis)
 
