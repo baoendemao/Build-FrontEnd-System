@@ -1,5 +1,5 @@
 #### 处理不同的路由
-* 方法1：使用app.use()处理不同的路由
+* 方法1：使用app.use()处理不同的路由 => 推荐使用方法2
 
 ```
 const Koa = require('koa');
@@ -35,7 +35,9 @@ console.log('server is starting at port 3000')
 浏览器中分别访问/ , /vue, /react, 得到不同的结果。
 
 * 方法2：koa-router => 推荐
+
 ```
+
 // 根据不同的请求，分别处理显示不同的内容
 const Koa = require('koa');
 const app = new Koa();
@@ -63,3 +65,6 @@ app.listen(3000)
 console.log('server is starting at port 3000')
 
 ```
+#### get, post, delete, put, patch
+
+####
