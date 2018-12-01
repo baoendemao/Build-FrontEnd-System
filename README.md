@@ -21,6 +21,9 @@
 * [模板引擎](https://github.com/baoendemao/front-end-engineering/tree/master/template/template-engine)
 * [jade](https://github.com/baoendemao/front-end-engineering/tree/master/template/jade)
 
+#### HTML
+* [web worker](https://github.com/baoendemao/front-end-engineering/tree/master/html/web-worker)
+* [触屏事件](https://github.com/baoendemao/front-end-engineering/tree/master/html/events)
 
 #### node
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
@@ -44,5 +47,10 @@
 #### jquery
 * [jquery](https://github.com/baoendemao/front-end-engineering/tree/master/jquery)
 
+#### mongo
+* [mongo](https://github.com/baoendemao/front-end-engineering/tree/master/mongo)
+
 #### go语言
 * [go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
+
+#### IOS
