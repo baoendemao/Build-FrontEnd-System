@@ -41,5 +41,8 @@
 #### zepto
 * [zepto](https://github.com/baoendemao/front-end-engineering/tree/master/zepto)
 
+#### jquery
+* [jquery](https://github.com/baoendemao/front-end-engineering/tree/master/jquery)
+
 #### go语言
 * [go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
