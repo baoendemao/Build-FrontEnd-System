@@ -361,7 +361,7 @@ case s
     p hello world
 ```
 
-* mixin => jade代码重用
+* mixin => 代码重用
 ```
 mixin hello
   p hello world
@@ -388,3 +388,90 @@ mixin hello(name, age)
 <p>10</p>
 
 ```
+
+```
+mixin hello(name)
+  p #{name}
+  if age
+    p #{age}
+  else 
+    p no age
+
++hello('hello')
+  p 10
+
+会被编译成
+<p>hello</p>
+<p>10</p>
+
+```
+
+```
+mixin hello(name)
+  p&attributes(attributes) #{name}
+
++hello('hello')(class='active', id='app')
+
+会被编译成
+<p id="app" class="active">hello</p>
+
+```
+
+```
+mixin hello(name)
+  p(class=!attributes.class) #{name}
+
+
+// 传递属性class，可以通过attributes.class取到
++hello('hello')(class='active')
+
+
+会被编译成
+<p class="active">hello</p>
+
+```
+
+
+```
+// 当参数个数不确定
+mixin hello(name, ...items)
+  ul(class='#{name}')
+    each item in items
+      li= item
+
++hello('hello', 'welcome', 'world', 'frontend')
+
+会被编译成
+<ul class="hello">
+  <li>welcome</li>
+  <li>world</li>
+  <li>frontend</li>
+</ul>
+
+```
+
+* jade的模板继承 
+```
+// hello.jade
+block hello
+  p inside hello
+
+
+// world.jade
+// 继承hello.jade
+extends hello
+
+block world
+  p inside world
+
+会被编译成
+<p>inside hello</p>
+<p>inside world</p>
+```
+
+#### jade api
+* jade.compile(source, options)
+* jade.compileFile(path, options)
+* jade.compileClient(source, options)
+* jade.render(source, options)
+* jade.renderFile(filename, options)
