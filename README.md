@@ -50,7 +50,10 @@
 #### mongo
 * [mongo](https://github.com/baoendemao/front-end-engineering/tree/master/mongo)
 
+#### typeScript
+
 #### go语言
 * [go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
 
 #### IOS
+* 如何搭建IOS开发环境

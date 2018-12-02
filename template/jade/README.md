@@ -22,6 +22,7 @@ $ jade -h
 
 ```
 
+# 编译jade
 $ jade jade/demos/index.jade
 # rendered jade/demos/index.html
 
@@ -69,6 +70,33 @@ h1 hello world
 
 ```
 
+* 注释
+```
+// h1 hello world
+
+会被编译成
+
+<!-- h1 hello world -->
+```
+
+```
+//- h1 hello world
+
+这种注释叫做非缓冲注释，编译后
+
+在Html中不会输出
+```
+
+```
+多行注释
+
+//-
+  p 
+    line one
+    line two
+    line three
+```
+
 * 属性，如class，id
 
 ```
@@ -98,6 +126,14 @@ h1.title.active#el
 <div id="el" class="title"></div>
 ```
 
+```
+div.title.active(id="app", class="detail") hello world
+
+会被编译成
+
+<div id="app" class="title active detail">hello world</div>
+```
+
 * a标签
 
 ```
@@ -116,5 +152,239 @@ input(name="type", type="checkbox", checked)
 会被编译成
 
 <input name="type"  type="checkbox"  checked>
+
+```
+
+* 多行文本换行的情况<br/>
+
+方法1：使用竖线 <br/>
+```
+p
+  | line one
+  | line two
+  | line three
+
+会被编译成
+
+<p>
+  line one
+  line two
+  line three
+</p>
+```
+
+```
+p
+  | line one
+  span line two
+
+会被编译成
+
+<p>
+  line one
+  <span>line two</span>
+</p>
+
+```
+
+方法2：使用点 <br/>
+```
+p.
+  line one
+  line two
+  line three
+
+会被编译成
+
+<p>
+  line one
+  line two
+  line three
+</p>
+```
+
+* 如何在script标签里定义变量
+
+```
+script.
+  var s = 'hello world';
+
+```
+* 如何在style标签里定义样式
+```
+style.
+  div { background: blue; }
+```
+
+* 声明变量
+```
+- var s = 'hello world'
+div #{s}
+
+被编译成
+
+<div>hello world<div/>
+```
+
+```
+- var s = 'hello world'
+div #{s.toUpperCase()}
+
+被编译成
+
+<div>HELLO WORLD</div>
+```
+* 变量的转义 => jade默认是自动转义的，叹号！表示非转义
+```
+- var s = 'hello world'
+- var s_html = '<script>console.log(123)</script>'
+
+div #{s}
+div #{s_html}
+div !{s_html}
+div= s
+div= s_html
+div!= s_html
+div \!{s_html}
+
+将会被编译成
+
+<div>hello world</div>
+
+<div>&lt;script&gt;console.log(123)&lt;/script&gt;</div>
+
+<div><script>console.log(123)</script></div>
+
+<div>hello world</div>
+
+<div>&lt;script&gt;console.log(123)&lt;/script&gt;</div>
+
+<div><script>console.log(123)</script></div>
+
+<div>!{s_html}</div>
+```
+
+```
+前提：s没有被定义
+
+input(value=s) 被编译成 <input>
+
+
+input(value='#{s}') 被编译成 <input value="undefined">
+
+```
+
+* if-else
+```
+- var i = 2
+- var active = true
+  if active
+    if i <=2
+      p hello
+    else 
+      p world
+
+会被编译成
+
+<p>
+  hello
+</p>
+
+```
+
+* for-in
+```
+- var student = {name: 'hello', age: '10'}
+
+- for (var k in student)
+  p= student[k]
+
+会被编译成
+
+<p>hello</p>
+<p>10</p>
+
+```
+
+* for-each
+
+```
+- var student = {name: 'hello', age: '10'}
+
+- each value, key in student
+  p #{key}: #{value}
+
+会被编译成
+
+<p>name: hello</p>
+<p>age: 10</p>
+
+```
+
+```
+- var arr = [123, 456, 789]
+- each item in courses
+  p= item
+
+会被编译成
+
+<p>123</p>
+<p>456</p>
+<p>789</p>
+
+```
+
+* while
+```
+- var i = 0;
+ul
+  while i < 2
+    li= i++
+
+被编译成
+
+<ul>
+  <li>0</li>
+  <li>1</li>
+</ul>
+
+```
+* case-when
+```
+- var s = 'hello'
+case s
+  when 'hello'
+    p hello
+  when 'world'
+    p world
+  default
+    p hello world
+```
+
+* mixin => jade代码重用
+```
+mixin hello
+  p hello world
+
+mixin的调用：
++hello
+
+会被编译成
+
+<p>hello world</p>
+
+```
+
+```
+mixin hello(name, age)
+  p #{name}
+  p #{age}
+
++hello('hello', 10)
+
+会被编译成
+
+<p>hello</p>
+<p>10</p>
 
 ```
