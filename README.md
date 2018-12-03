@@ -8,44 +8,44 @@
 * [如何编写shell脚本对日志进行切割](https://github.com/baoendemao/front-end-engineering/tree/master/shell-log)
 * [在linux下使用httpry抓包](https://github.com/baoendemao/front-end-engineering/tree/master/httpry)
 
-#### git
-* [git](https://github.com/baoendemao/front-end-engineering/tree/master/git)
+#### Git
+* [Git](https://github.com/baoendemao/front-end-engineering/tree/master/git)
 
 #### 浏览器
 * [前端性能分析](https://github.com/baoendemao/front-end-engineering/tree/master/performance-analysis)
 
 #### APP
-* [hybrid](https://github.com/baoendemao/front-end-engineering/tree/master/APP-related/hybrid)
+* [Hybrid](https://github.com/baoendemao/front-end-engineering/tree/master/APP-related/hybrid)
 
 #### 模板
 * [模板引擎](https://github.com/baoendemao/front-end-engineering/tree/master/template/template-engine)
-* [jade](https://github.com/baoendemao/front-end-engineering/tree/master/template/jade)
+* [Jade](https://github.com/baoendemao/front-end-engineering/tree/master/template/jade)
 
-#### HTML
+#### Html
 * [web worker](https://github.com/baoendemao/front-end-engineering/tree/master/html/web-worker)
 * [触屏事件](https://github.com/baoendemao/front-end-engineering/tree/master/html/events)
 
-#### react
-* [react](https://github.com/baoendemao/front-end-engineering/tree/master/react)
+#### React
+* [React](https://github.com/baoendemao/front-end-engineering/tree/master/react)
 
-#### node
+#### Node
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
 * [event loop](https://github.com/baoendemao/front-end-engineering/tree/master/node/event-loop)
 * [cluster](https://github.com/baoendemao/front-end-engineering/tree/master/node/cluster)
 * [global](https://github.com/baoendemao/front-end-engineering/tree/master/node/global)
 
-#### koa
+#### Koa
 * [搭建koa项目](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-build)
 * [koa context](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-context)
 * [koa 路由](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-router)
 * [koa bodyparser](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-bodyparser)
 
-#### egg
-* [egg](https://github.com/baoendemao/front-end-engineering/tree/master/node/egg)
+#### Egg
+* [Egg](https://github.com/baoendemao/front-end-engineering/tree/master/node/egg)
 
 
-#### zepto
-* [zepto](https://github.com/baoendemao/front-end-engineering/tree/master/zepto)
+#### Zepto
+* [Zepto](https://github.com/baoendemao/front-end-engineering/tree/master/zepto)
 
 #### jquery
 * [jquery](https://github.com/baoendemao/front-end-engineering/tree/master/jquery)
@@ -53,10 +53,10 @@
 #### mongo
 * [mongo](https://github.com/baoendemao/front-end-engineering/tree/master/mongo)
 
-#### typeScript
+#### TypeScript
 
-#### go语言
-* [go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
+#### Go语言
+* [Go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
 
 #### IOS
 * 如何搭建IOS开发环境
