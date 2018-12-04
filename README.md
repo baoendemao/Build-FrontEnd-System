@@ -62,6 +62,6 @@
 * [Go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
 
 #### IOS
-* 如何搭建IOS开发环境
+* [如何搭建IOS开发环境](https://github.com/baoendemao/front-end-engineering/tree/master/ios/setup)
 
 #### Docker
