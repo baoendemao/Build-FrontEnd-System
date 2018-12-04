@@ -32,6 +32,7 @@
 
 
 #### Node
+* [安装升级node版本](https://github.com/baoendemao/front-end-engineering/tree/master/node/n-module)
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
 * [event loop](https://github.com/baoendemao/front-end-engineering/tree/master/node/event-loop)
 * [cluster](https://github.com/baoendemao/front-end-engineering/tree/master/node/cluster)
