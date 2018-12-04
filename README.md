@@ -27,6 +27,9 @@
 
 #### React
 * [React](https://github.com/baoendemao/front-end-engineering/tree/master/react)
+* [jsx](https://github.com/baoendemao/front-end-engineering/tree/master/jsx)
+* [preact](https://github.com/baoendemao/front-end-engineering/tree/master/preact)
+
 
 #### Node
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
