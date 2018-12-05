@@ -11,13 +11,13 @@
             * 本地有完整的仓库，占用存储空间
             * 第一次clone速度慢
 * 几个名词
-    * untracked     未被跟踪
-    * staged        已被暂存
-    * staging area  暂存区,  git add命令可以将文件放入暂存区
-    * remotes/origin/master   其中remotes/origin是远端仓库的名字， master是分支名字
-    * commit        将整个git管理的commit看做一棵树，commit看做是树的节点
-    * branch        一个branch是commit树中从根节点到叶子节点的其中一个路径
-    * HEAD          其中HEAD指的是当前commit的引用。当git commit添加一个新的commit的时候，HEAD会指向一个新的commit。当使用git checkout或者git reset的时候，HEAD也会改变。而对于远程仓库来说，HEAD总是指向master的
+    * untracked => 未被跟踪
+    * staged => 已被暂存
+    * staging area => 暂存区,  git add命令可以将文件放入暂存区
+    * remotes/origin/master => 其中remotes/origin是远端仓库的名字， master是分支名字
+    * commit => 将整个git管理的commit看做一棵树，commit看做是树的节点
+    * branch => 一个branch是commit树中从根节点到叶子节点的其中一个路径
+    * HEAD => 其中HEAD指的是当前commit的引用。当git commit添加一个新的commit的时候，HEAD会指向一个新的commit。当使用git checkout或者git reset的时候，HEAD也会改变。而对于远程仓库来说，HEAD总是指向master的
     * ^表示之前的commit，例如:
         * HEAD^表示HEAD所指向的commit的之前的一个commit， HEAD^^表示HEAD所指向的commit的之前两个commit，即^的个数表示向前多少个commit
     * ~n表示向前n个commit，例如
