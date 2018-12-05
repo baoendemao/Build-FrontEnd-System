@@ -8,8 +8,9 @@
 * [如何编写shell脚本对日志进行切割](https://github.com/baoendemao/front-end-engineering/tree/master/shell-log)
 * [在linux下使用httpry抓包](https://github.com/baoendemao/front-end-engineering/tree/master/httpry)
 
-#### Git
-* [Git](https://github.com/baoendemao/front-end-engineering/tree/master/git)
+#### git
+* [git常用命令和原理详解](https://github.com/baoendemao/front-end-engineering/tree/master/git)
+* [一些git的小tips](https://github.com/baoendemao/front-end-engineering/tree/master/git/git-tips)
 
 #### 浏览器
 * [前端性能分析](https://github.com/baoendemao/front-end-engineering/tree/master/performance-analysis)
@@ -58,6 +59,10 @@
 * [mongo](https://github.com/baoendemao/front-end-engineering/tree/master/mongo)
 
 #### TypeScript
+
+#### vim
+
+#### sed and awk
 
 #### Go语言
 * [Go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
