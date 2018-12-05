@@ -167,7 +167,9 @@ git merge所做的原理是： 将其他commit子路径合并到当前commit节�
     * git diff --staged  暂存区和上一次commit的不同
     * git diff HEAD  和HEAD指向的commit进行对比
 
-* .git文件夹
+<br/>
+
+* \.git文件夹
 
 ```
 
