@@ -177,12 +177,4 @@ $ ls -a
 
 ```
 
-* git产生的冲突
-    * 情形
-        * git push产生的冲突
-        * git merge产生的冲突
-    * 放弃解决冲突，想回到merge前
-    ```
-        git merge --abort
 
-    ```
