@@ -129,7 +129,7 @@ HEAD指向的分支
     * 配置user email
     ```
 
-        git config --global user.email "yourname@yidian-inc.com"
+        git config --global user.email "yourname@xxxxx.com"
 
     ```
     * 配置alias别名
