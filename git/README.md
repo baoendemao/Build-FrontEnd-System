@@ -18,6 +18,11 @@
     * commit        将整个git管理的commit看做一棵树，commit看做是树的节点
     * branch        一个branch是commit树中从根节点到叶子节点的其中一个路径
     * HEAD          其中HEAD指的是当前commit的引用。当git commit添加一个新的commit的时候，HEAD会指向一个新的commit。当使用git checkout或者git reset的时候，HEAD也会改变。而对于远程仓库来说，HEAD总是指向master的
+    * ^表示之前的commit，例如:
+        * HEAD^表示HEAD所指向的commit的之前的一个commit， HEAD^^表示HEAD所指向的commit的之前两个commit，即^的个数表示向前多少个commit
+    * ~n表示向前n个commit，例如
+        * HEAD~5表示HEAD指向的commit的之前的5个commit
+
 
 * git管理的文件的状态
     * changed / unstaged 已修改
@@ -105,9 +110,10 @@ HEAD指向的分支
 
          Your branch is ahead of 'remotes/origin/master' by 2 commits  => 你的本地仓库已经领先中央仓库两个提交了
     ```
-
-* git checkout branch_1   切换分支
-    * 将某个commit作为当前的commit, 并移动HEAD
+    
+* git checkout
+    * git checkout branch_1   切换分支
+        * 将某个commit作为当前的commit, 并移动HEAD
 
 * git config credential.helper store
     * git明文保存你输入的密码在本地存储，以后不用再输入密码，不安全
