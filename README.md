@@ -65,7 +65,8 @@
 #### sed and awk
 
 #### Go语言
-* [Go语言](https://github.com/baoendemao/front-end-engineering/tree/master/go)
+* [Go语言实践](https://github.com/baoendemao/front-end-engineering/tree/master/go)
+* [Restful Api](https://github.com/baoendemao/front-end-engineering/tree/master/restful-api)
 
 #### IOS
 * [如何搭建IOS开发环境](https://github.com/baoendemao/front-end-engineering/tree/master/ios/setup)
