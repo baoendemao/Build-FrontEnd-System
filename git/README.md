@@ -16,7 +16,7 @@
     * staging area  暂存区,  git add命令可以将文件放入暂存区
     * remotes/origin/master   其中remotes/origin是远端仓库的名字， master是分支名字
     * commit        将整个git管理的commit看做一棵树，commit看做是树的节点
-    * branch        一个branch是commit树中从根节点到叶子节点的其中一个路径
+    * branch        一个branch是commit树中从根节点到叶子节点的其中一个路径
     * HEAD          其中HEAD指的是当前commit的引用。当git commit添加一个新的commit的时候，HEAD会指向一个新的commit。当使用git checkout或者git reset的时候，HEAD也会改变。而对于远程仓库来说，HEAD总是指向master的
     * ^表示之前的commit，例如:
         * HEAD^表示HEAD所指向的commit的之前的一个commit， HEAD^^表示HEAD所指向的commit的之前两个commit，即^的个数表示向前多少个commit
@@ -42,7 +42,7 @@
         切换到master分支，在master分支上创建新的分支:
         git branch branch_2
 
-        此时还是在master分支上，需要切换到新创建的分支：
+        此时还是在master分支上，需要切换到新创建的分支：
         git checkout branch_2
     ```
 
@@ -76,7 +76,7 @@
 （1）commit 5ca2bdxxxxxxxxxxxxxxxxxxx 表示：<br/>
 commit后面跟的是一个SHA-1校验和，用来指代区分不同的commit
 <br/>
-（2）HEAD -> branch_1, origin/branch_1 表示：<br/>
+（2）HEAD -> branch_1, origin/branch_1 表示：<br/>
 HEAD指向的分支
 <br/>
 
