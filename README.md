@@ -4,6 +4,8 @@
 
 #### 遇到的问题以及思路总结
 * [-webkit-overflow-scrolling: touch带来橡皮筋回弹流畅感的同时，也会引发卡顿和白屏问题](https://github.com/baoendemao/front-end-engineering/tree/master/issues-solving/webkit-overflow-scrolling)
+* [闪屏问题](https://github.com/baoendemao/front-end-engineering/tree/master/issues-solving/flash-screen)
+* [ios bounce带来的问题](https://github.com/baoendemao/front-end-engineering/tree/master/issues-solving/iBounce)
 
 #### 工程化
 * [如何在Linux上搭建前端系统工程](https://github.com/baoendemao/front-end-engineering/tree/master/system-construction)
