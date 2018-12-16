@@ -63,9 +63,10 @@
         $('body').addClass('scroll-touch');
       });
 
+      // 改成结束滚动的时候移除这个class
       document.addEventListener('touchend',function (){
-        $('body').animate({duration: 2000}, function(){
-          $(this).removeClass('scroll-touch');
-        });
+         
+          $('body').removeClass('scroll-touch');
+       
       });
     ```
