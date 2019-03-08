@@ -469,6 +469,41 @@ block world
 <p>inside world</p>
 ```
 
+```
+//- index.pug
+extends layout.pug
+
+block title
+  title Article Title
+
+block content
+  h1 My Article
+
+//- layout.pug
+doctype html
+html
+  head
+    block title
+      title Default title
+  body
+    block content
+
+index.pug会被编译成：
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Article Title</title>
+</head>
+
+<body>
+  <h1>My Article</h1>
+</body>
+
+</html>
+
+```
+
 #### jade api
 * jade.compile(source, options)
 * jade.compileFile(path, options)
