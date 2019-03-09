@@ -1,5 +1,35 @@
 ### koa 待整理
 
+#### application
+* application.js向外边暴露了一个class
+* 继承了Emitter, 从而可以监听以及触发事件
+```
+module.exports = class Application extends Emitter {
+ 
+  constructor() {
+    super();
+
+    this.proxy = false;
+    this.middleware = [];
+    this.subdomainOffset = 2;
+    this.env = process.env.NODE_ENV || 'development';
+    this.context = Object.create(context);
+    this.request = Object.create(request);
+    this.response = Object.create(response);
+    if (util.inspect.custom) {
+      this[util.inspect.custom] = this.inspect;
+    }
+  }
+}
+
+```
+
+#### context
+
+#### request
+
+#### response
+
 #### 渲染html
 
 ##### （1）赋值koa context body
