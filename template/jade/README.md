@@ -206,15 +206,21 @@ p.
 * 如何在script标签里定义变量
 
 ```
+//- 添加script标签，编写内联script脚本
 script.
   var s = 'hello world';
+  console.log(s);
 
 ```
 * 如何在style标签里定义样式
-```
-style.
-  div { background: blue; }
-```
+  * 在标签的后面加 . 表示之后的的内容全属于这个标签，可以用来添加文字、脚本和样式，但是.和标签之前一定不可以有空格
+    
+    ```
+    //- 添加style标签，添加样式
+    style.
+      .container { background: blue; }
+
+    ```
 
 * 声明变量
 ```
@@ -451,6 +457,7 @@ mixin hello(name, ...items)
 ```
 
 * jade的模板继承 
+<br> 例子（1）
 ```
 // hello.jade
 block hello
@@ -468,7 +475,7 @@ block world
 <p>inside hello</p>
 <p>inside world</p>
 ```
-
+<br/>例子（2）
 ```
 //- index.pug
 extends layout.pug
