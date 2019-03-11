@@ -39,6 +39,9 @@
 * [event loop](https://github.com/baoendemao/front-end-engineering/tree/master/node/event-loop)
 * [cluster](https://github.com/baoendemao/front-end-engineering/tree/master/node/cluster)
 * [global](https://github.com/baoendemao/front-end-engineering/tree/master/node/global)
+* [glob](https://github.com/baoendemao/front-end-engineering/tree/master/node/glob)
+* [path](https://github.com/baoendemao/front-end-engineering/tree/master/node/path)
+
 
 #### Koa
 * [搭建koa项目](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-build)
@@ -58,6 +61,8 @@
 
 #### mongo
 * [mongo](https://github.com/baoendemao/front-end-engineering/tree/master/mongo)
+* [mongoose](https://github.com/baoendemao/front-end-engineering/tree/master/mongoose)
+
 
 #### TypeScript
 
