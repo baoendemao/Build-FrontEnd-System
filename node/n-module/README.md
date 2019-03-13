@@ -35,3 +35,20 @@ sudo n
 
 #### nvm命令安装升级node
 * nvm命令
+```
+nvm install stable
+
+nvm install 10.13.0
+
+// 远程服务器所有可用node版本
+nvm ls-remote
+
+// 切换到10.13.0版本
+nvm use 10.13.0
+
+// 切换到最新的版本
+nvm use node
+
+// 列出所有已经安装的版本
+nvm ls
+```

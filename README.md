@@ -34,6 +34,13 @@
 
 
 #### Node
+* 应用
+  * web聊天室 socket.io
+  * web博客 hexo
+  * web论坛 node club
+  * 前端模块管理平台  bower.js
+  * 浏览器环境工具 browserify
+  * 命令行工具 Commander
 * [安装升级node版本](https://github.com/baoendemao/front-end-engineering/tree/master/node/n-module)
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
 * [event loop](https://github.com/baoendemao/front-end-engineering/tree/master/node/event-loop)
@@ -44,6 +51,7 @@
 
 
 #### Koa
+* [koa 概念理解](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/README.md)
 * [搭建koa项目](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-build)
 * [koa context](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-context)
 * [koa 路由](https://github.com/baoendemao/front-end-engineering/tree/master/node/koa/koa-router)
