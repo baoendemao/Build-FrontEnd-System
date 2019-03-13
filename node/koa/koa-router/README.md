@@ -70,7 +70,7 @@
         module.exports = router;
 
         ```
-* 方法2：使用app.use()处理不同的路由 => 推荐使用方法1
+* 方法2：使用ctx.request.path处理不同的路由 => 推荐使用方法1
 
     ```
         const Koa = require('koa');
