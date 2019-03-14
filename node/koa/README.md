@@ -239,6 +239,20 @@
     ```
   * koa-static中间件
     * 用于加载静态资源，如js, css
+    ```
+      const koa = require('koa')
+      const app = new koa()
+      const serve = require('koa-static')
+
+      app.use(serve('.'))
+      app.listen(8080)
+
+      运行： 
+      curl http://localhost:8080/xxx.js
+
+      结果是xxx.js的内容
+
+    ```
   * koa-views中间件
     * 用于加载html模板
 
@@ -462,5 +476,51 @@ app.use(async (ctx, next) => {
 	});
 });
 
+
+```
+
+#### 获取请求的参数
+* querystring模块
+```
+  const querystring = require('querystring')
+
+  querystring.escape('id=1')     // id%3Dl
+
+  querystring.unescape('id%3Dl') // id=l
+
+  querystring.parse('type=1&status=0') //返回{ type: '1', status: '0' )
+
+  querystring.stringify({ type:'1', status:'0' }) //返回 type=1&status=O
+
+
+```
+* koa的ctx.request.querystring
+```
+  router.get('/', (ctx, next) => {
+    console.log(ctx.request.query)
+    console.log(ctx.request.querystring)
+    ctx.response.body = '<div>hello world</div>'
+  })
+
+  运行：
+  curl http://localhost:8080?id=1
+
+  结果：
+  { id: '1' }
+  id=1
+
+```
+* 获取url中的参数，如 localhost:8080/id/123/abc
+```
+  router.get('/xxx/:id/:name', (ctx, next) => {
+    console.log(ctx.params)
+    ctx.response.body = '<div>hello world</div>'
+  })
+
+  运行：
+  curl http://localhost:8080/xxx/123/world
+
+  结果：
+  { id: '123', name: 'world' }
 
 ```
