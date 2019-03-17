@@ -203,6 +203,20 @@ WriteResult({ "nInserted" : 1 })
                 { "_id" : ObjectId("5c8c8609529cdc4d1db7f532"), "username" : "hello", "score" : 20, "arr" : [ { "a" : 1 }, { "b" : 2 } ] }
 
             ```
+        * $each
+            * 例子
+            ```
+                > db.users.find()
+                { "_id" : ObjectId("5c8c85f7529cdc4d1db7f531"), "username" : "world" }
+  
+                # 使用$each，可以一次$push多个值
+                > db.users.update({username: 'world'}, {$push: {arr: {$each: [11, 22, 33, 44, 55]}}})
+                WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+                > db.users.find()
+                { "_id" : ObjectId("5c8c85f7529cdc4d1db7f531"), "username" : "world", "arr" : [ 11, 22, 33, 44, 55 ] }
+
+            ```
 
 
             
@@ -236,3 +250,33 @@ WriteResult({ "nInserted" : 1 })
         ```
 
 #### 索引
+
+#### 安全
+* 修改mongo的默认端口号27017
+* 导出备份相关
+```
+# 将数据库导出到指定目录
+mongodump -h 127.0.0.1:27017 -d 数据库名字 -o 备份文件目录名
+
+# 从指定目录，将数据导入到数据库
+mongorestore --host 127.0.0.1:27017 -d 数据库名字 本地的目录名字
+
+
+# 只导出一张单表
+mongoexport -d 数据库名字 -c 表名字 -o 备份文件目录名
+
+# 将导出的一张单表，导入到数据库
+mongoimport --host 127.0.0.1:27017 -d 数据库名字 -c 表名字 本地的备份的文件名字
+
+# 删除数据库
+mongo --host 127.0.0.1:27017 数据库名字 --eval "db.dropDatabase()"
+
+
+````
+
+* 权限
+```
+$ mongo
+
+
+```
