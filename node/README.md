@@ -1,5 +1,12 @@
 ### node待整理
 
+#### node的全局对象
+* global
+* process
+* Buffer
+* require
+* console
+
 #### net => TCP客户端和服务端库
 * 例子
   * 例子（1）聊天室
@@ -216,8 +223,33 @@
 
 
 #### global 全局变量
+* 全局
+  * REPL中的全局
+  ```
+    > var a = 123
+    undefined
+    > global.a
+    123
+
+  ```
+  * node模块中的全局
+    * 仅仅在该模块中是全局的，在其他模块中不可见。
+    * 只有显示导出的才可以被其他模块使用
 
 #### process 进程
+* 概述：
+  * 提供关于进程标识，当前运行环境
+  ```
+    > process.execPath
+    '/usr/local/bin/node'
+
+    > process.version
+    'v10.13.0'
+
+    > process.platform
+    'darwin'
+
+  ```
 * process.nextTick
   * 例子（1）
   ```
@@ -235,7 +267,14 @@
 
 * 三个流对象：process.stdin, process.stdout, process.stderr
   * 分别对应unix标准流：标准输入，标准输出，标准错误
-
+  * process.stdin
+    * 异步
+    * 可读
+  * process.stdout
+    * 异步
+    * 可写
+  * process.stderr
+    * 同步可阻塞流
 * process.argv
   * 例子
     * 例子（1）

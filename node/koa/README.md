@@ -347,6 +347,8 @@ app.use(async (ctx, next) => {
 
   querystring.parse('type=1&status=0') //返回{ type: '1', status: '0' )
 
+  querystring.parse('file=first&file=second&test=one').file   // 返回 [ 'first', 'second' ]
+
   querystring.stringify({ type:'1', status:'0' }) //返回 type=1&status=O
 
 
