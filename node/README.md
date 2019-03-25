@@ -74,7 +74,36 @@
   ```
 
 #### dns => 域名解析库
+* 例子
+  * dns.lookup: 根据域名获取ip地址
+    ```
+      var dns = require('dns')
 
+      dns.lookup('www.xxx.com', (err, ip) => {
+        if (err) throw err;
+        console.log(ip)
+      })
+
+    ```
+  * dns.reverse：根据ip地址获取域名
+    ```
+      var dns = require('dns')
+
+      dns.reverse('55.222.88.11', (err, domains) => {
+        if (err) throw err;
+        console.log(domains)
+      })
+
+    ```
+  * dns.resolve: 根据指定的记录类型返回一组记录
+    ```
+      var dns = require('dns')
+
+      dns.resolve('www.xxx.com', 'NS', (err, domains) => {
+        console.log(domains)
+      } )
+
+    ```
 #### http
 * http服务器与客户端模块
 * http.createServer
@@ -167,8 +196,54 @@
 * 提供处理路径的工具函数
 
 #### url
-* url处理与解析
+* url.parse
+```
+  var url = require('url')
+  var o = url.parse('http://www.xxx.com/index.html?a=1&b=2')
+  console.log(o)
 
+```
+* url.format
+```
+  var url = require('url')
+
+  var url_obj = url.parse('http://www.xxx.com/index.html?a=1&b=2')
+  console.log(url_obj)
+
+  var url_str = url.format(url_obj)
+  console.log(url_str)
+
+```
+
+#### querystring
+* querystring.parse
+```
+  var querystring = require('querystring')
+
+  var vals = querystring.parse('a=1&b=2&c=3')
+  console.log(vals)
+
+  运行结果：
+  { a: '1', b: '2', c: '3' }
+
+```
+* querystring.stringify
+```
+
+  var querystring = require('querystring')
+
+  var vals = querystring.parse('a=1&b=2&c=3')
+  console.log(vals)
+
+  var vals_str = querystring.stringify(vals)
+  console.log(vals_str)
+
+  运行结果：
+  { a: '1', b: '2', c: '3' }
+
+  a=1&b=2&c=3
+
+```
 #### os => 查询平台信息的操作系统库
 
 
@@ -275,6 +350,16 @@
     * 可写
   * process.stderr
     * 同步可阻塞流
+  * 例子
+    * 例子（1）
+    ```
+      process.stdin.resume()
+      process.stdin.pipe(process.stdout)
+
+      运行结果：
+      你输入的任何信息将立即回显给你
+      
+    ```
 * process.argv
   * 例子
     * 例子（1）
@@ -328,6 +413,57 @@
   process.exit(1)
 
 ```
+
+#### child_process 子进程
+* child_process.spawn() 异步地衍生子进程，且不阻塞 Node.js 事件循环
+  * 例子: 启动一个新的子进程，在子进程中执行shell命令
+  ```
+    var spawn = require('child_process').spawn
+    var pwd = spawn('pwd')
+
+    pwd.stdout.setEncoding('utf8')
+    pwd.stderr.setEncoding('utf8')
+
+
+    pwd.stdout.on('data', (data) => {
+      console.log('stdout: ')
+      console.log(data)
+    })
+
+    pwd.stderr.on('data', (data) => {
+      console.log('stderr: ')
+      console.log(data)
+    })
+
+    pwd.on('exit', (code) => {
+      console.log('child process exited with code:  ' + code)
+    })
+  ```
+* child_process.exec和child_process.execFile 启动shell执行命令
+  * child_process.exec  执行一条命令
+  * child_process.execFile 执行一个可执行文件，而不是运行一条命令
+  * 例子
+  ```
+    // app.js
+    #!/usr/local/bin/node
+    console.log('hello world')
+
+    // test.js
+    var execfile = require('child_process').execFile
+    var child = execfile('./app.js', (err, stdout, stderr) => {
+      if (!err) {
+        console.log(stdout)
+      }
+    })
+
+
+    运行： node test.js
+
+  ```
+
+* child_process.fork
+  * 启动子进程，其实是对spawn方法的封装
+
 #### Buffer 缓冲器
 * 例子
   * 例子（1）
@@ -346,3 +482,42 @@
 #### child_process
 * 子进程：解决单线程无法利用多核cpu的问题，将计算分发给各个子进程，再通过进程之间的事件消息来传递结果
 * 通过master-worker管理方式，可以很好的管理各个工作进程
+
+#### readline 逐行读取
+* 例子
+  * 例子（1）readline的interface实例来按行读取
+  ```
+    var readline = require('readline')
+    // 创建一个readline的interface实例
+    var interface = readline.createInterface(process.stdin, process.stdout, null)
+
+    interface.question('>> what is the meaning of life? ', (answer) => {
+      console.log('About the meaning of life , you said ' + answer)
+      interface.setPrompt('>>')
+      interface.prompt()
+    })
+
+    function closeInterface() {
+      console.log('Leaving interface')  
+      process.exit()
+    }
+
+    // 监听line事件
+    interface.on('line', (cmd) => {
+      if (cmd.trim() == '.leave') {
+        closeInterface()
+        return
+      } else {
+        console.log('repeating command: ' + cmd)
+      }
+      interface.setPrompt('>>')
+      interface.prompt()
+    })
+
+    // 监听close事件
+    interface.on('close', () => {
+      closeInterface()
+    })
+
+  ```
+
