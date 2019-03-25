@@ -41,6 +41,7 @@
   * 前端模块管理平台  bower.js
   * 浏览器环境工具 browserify
   * 命令行工具 Commander
+* [node待整理](https://github.com/baoendemao/front-end-engineering/tree/master/node/README.md)
 * [nodejs api](https://github.com/baoendemao/front-end-engineering/tree/master/node/node-api)
 * [安装升级node版本](https://github.com/baoendemao/front-end-engineering/tree/master/node/n-module)
 * [nodemon](https://github.com/baoendemao/front-end-engineering/tree/master/node/nodemon)
