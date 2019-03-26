@@ -74,7 +74,8 @@
 * [mongoose](https://github.com/baoendemao/front-end-engineering/tree/master/mongoose)
 
 
-#### TypeScript
+#### typeScript
+* [typescript](https://github.com/baoendemao/front-end-engineering/tree/master/typescript)
 
 #### vim
 
