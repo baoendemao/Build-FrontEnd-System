@@ -1,5 +1,5 @@
 ### typescript
-
+* 官网文档  https://www.tslang.cn/docs/home.html
 * 安装 
 ```
 sudo npm install typescript -g
@@ -18,4 +18,12 @@ tsc --version
     tsc hello.ts
 
     ```
-* 字符串
+* 类
+    * public
+    * private
+    * protected
+* 泛型
+* 接口
+    * interface
+    * implement
+* 注解
